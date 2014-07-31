@@ -362,14 +362,15 @@
 
     ```javascript
     // bad
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball = 'z';
+
+    // good
     var items = getItems(),
         goSportsTeam = true,
         dragonball = 'z';
 
-    // good
-    var items = getItems();
-    var goSportsTeam = true;
-    var dragonball = 'z';
     ```
 
   - Declare unassigned variables last. This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
@@ -387,11 +388,11 @@
         len;
 
     // good
-    var items = getItems();
-    var goSportsTeam = true;
-    var dragonball;
-    var length;
-    var i;
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball,
+        length,
+        i;
     ```
 
   - Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
